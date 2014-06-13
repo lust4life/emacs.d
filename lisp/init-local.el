@@ -18,4 +18,8 @@
 ;; 替换默认的 cperl mode
 (require 'prelude-perl)
 
+;; directory tree
+(require 'dirtree)
+
+
 (provide 'init-local)
