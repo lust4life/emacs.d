@@ -21,5 +21,21 @@
 ;; directory tree
 (require 'dirtree)
 
+;; enable linum mode
+(global-linum-mode 1) ; Always show line numbers
+(setq linum-format "%d") ; set format
+
+
+;; Setting English Font
+(set-face-attribute
+'default nil :font "PragmataPro")
+
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font)
+charset
+(font-spec :family "Microsoft YaHei UI" :size 10)))
+
+
 
 (provide 'init-local)
