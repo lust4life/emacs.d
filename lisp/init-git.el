@@ -4,7 +4,7 @@
 (require-package 'git-rebase-mode)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
-(require-package 'git-messenger)
+(require-package 'git-messenger) ;; Though see also vc-annotate's "n" & "p" bindings
 
 (setq-default
  magit-save-some-buffers nil
