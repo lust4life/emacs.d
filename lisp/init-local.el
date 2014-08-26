@@ -36,6 +36,7 @@
 charset
 (font-spec :family "Microsoft YaHei UI" :size 10)))
 
-
+;; run as a server mode
+(server-start)
 
 (provide 'init-local)
