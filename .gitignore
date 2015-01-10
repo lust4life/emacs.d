@@ -32,5 +32,11 @@ site-lisp/package/
 /emms/
 /.smex-items
 /image-dired/
+
 /server
 /eshell
+/.cask/
+/.sx/
+
+ido.last
+recentf
