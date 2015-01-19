@@ -39,4 +39,10 @@ charset
 ;; run as a server mode
 (server-start)
 
+
+;; add o-blog
+(add-to-list 'load-path "~/.emacs.d/site-lisp/o-blog/lisp/")
+(require 'o-blog)
+
+
 (provide 'init-local)
