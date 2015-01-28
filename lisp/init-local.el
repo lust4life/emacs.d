@@ -27,14 +27,14 @@
 
 
 ;; Setting English Font
-(set-face-attribute
-'default nil :font "PragmataPro")
+(set-face-attribute 'default nil :family "Input 11")
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
-(set-fontset-font (frame-parameter nil 'font)
-charset
-(font-spec :family "Microsoft YaHei UI" :size 10)))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "Microsoft YaHei UI" :size 14)))
+
 
 ;; run as a server mode
 (server-start)
