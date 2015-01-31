@@ -4,7 +4,7 @@
 
 ;; 半透明
 (when window-system
-  (setq alpha-list '((80 50) (100 100)))
+  (setq alpha-list '((90 75) (100 100)))
   (defun wf-toggle-alpha ()
     (interactive)
     (let ((h (car alpha-list)))
