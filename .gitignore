@@ -42,3 +42,5 @@ ido.last
 recentf
 
 site-lisp/
+
+/org-clock-save.el
