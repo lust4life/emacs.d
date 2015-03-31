@@ -40,10 +40,12 @@
 (server-start)
 
 
-;; add o-blog
-(add-to-list 'load-path "~/.emacs.d/site-lisp/o-blog/lisp/")
-(require 'o-blog)
-
+;; add org-page blog system static page generate
+(require 'org-page)
+(setq op/repository-directory "e:/git/lust4life/")   ;; the repository location
+(setq op/site-domain "http://lust4life.github.io/")         ;; your domain
+;;; the configuration below you should choose one, not both
+(setq op/personal-disqus-shortname "lust4life")    ;; your disqus commenting system
 
 ;; about erc
 
