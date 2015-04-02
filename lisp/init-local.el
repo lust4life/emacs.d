@@ -73,6 +73,29 @@
 (global-set-key (kbd "C-c e") 'djcb-erc-start-or-switch) ;; ERC
 
 
+;; use for paste clipboard image to org-mode
+
+(defun paste-img ()
+  "paste the img from clipboard to org-buffer int the same directory and insert a link "
+  (interactive)
+
+  (setq foldername (concat (buffer-file-name) "-IMG/"))
+  (if (not (file-exists-p foldername))
+      (mkdir foldername))
+
+  ;; (setq imgName (concat "img_" (format-time-string "%Y_%m_%d__%H_%M_%S") ".png"))
+  (setq imgName (read-string "fileName:"))
+  (setq imgPath (concat (buffer-name) "-IMG/" imgName))
+
+  (call-process "perl" nil nil nil "E:/git/quick.dirty.perl/Perl STH/tools/pasteIntoFile.pl" (concat "-f=" imgPath))
+
+  (setq relativeFilename (concat "./" imgPath))
+
+  (insert (concat "[[" relativeFilename "]]"))
+  )
+
+(global-set-key (kbd "C-c v") 'paste-img)
+
 
 
 (provide 'init-local)
