@@ -15,6 +15,7 @@
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(fci-rule-color "#eee8d5")
  '(org-agenda-files (quote ("e:/git/lust4life/org/org-learn.org")))
+ '(org-html-doctype "html5")
  '(org-startup-truncated t)
  '(safe-local-variable-values
    (quote
