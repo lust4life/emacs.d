@@ -97,8 +97,10 @@
 (global-set-key (kbd "C-c v") 'paste-img)
 
 ;; exports your Org documents to reveal.js presentations
-
 (require 'ox-reveal)
+
+;; 配置 org-publish
+(require 'org-publish-config)
 
 
 (provide 'init-local)
