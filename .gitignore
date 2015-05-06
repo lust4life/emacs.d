@@ -43,3 +43,4 @@ recentf
 site-lisp/
 
 /org-clock-save.el
+/ditaa*.jar
