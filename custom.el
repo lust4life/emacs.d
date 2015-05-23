@@ -27,9 +27,8 @@
 <p><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"知识共享许可协议\" style=\"border-width: 0\" src=\"https://i.creativecommons.org/l/by-nc/4.0/88x31.png\"/></a></p>"))))
  '(org-html-preamble-format
    (quote
-    (("zh" "    <p>
-                        <span>Created: <span class=\"timestamp-wrapper\"><span class=\"timestamp\">[2015-04-01 Wed]</span></span></span><br><span>Modified: 2015-04-23 Thu 21:31</span>
-                    </p>"))))
+    (("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>
+  <p>Modified: <span name=\"modified-date\">%C</span></p>"))))
  '(org-startup-truncated t)
  '(safe-local-variable-values
    (quote
