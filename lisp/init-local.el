@@ -41,9 +41,10 @@
 
 
 ;; add org-page blog system static page generate
-(require 'org-page)
-(setq op/repository-directory "e:/git/lust4life/")   ;; the repository location
-(setq op/site-domain "http://lust4life.github.io/")         ;; your domain
+;; (require 'org-page)
+;; (setq op/repository-directory "e:/git/lust4life/")   ;; the repository location
+;; (setq op/site-domain "http://lust4life.github.io/")         ;; your domain
+
 ;;; the configuration below you should choose one, not both
 (setq op/personal-disqus-shortname "lust4life")    ;; your disqus commenting system
 
@@ -73,31 +74,30 @@
 (global-set-key (kbd "C-c e") 'djcb-erc-start-or-switch) ;; ERC
 
 
-;; use for paste clipboard image to org-mode
+ ;; use for paste clipboard image to org-mode
 
 (defun paste-img ()
-  "paste the img from clipboard to org-buffer int the same directory and insert a link "
-  (interactive)
+ "paste the img from clipboard to org-buffer int the same directory and insert a link "
+ (interactive)
 
-  (setq foldername (concat (buffer-file-name) "-IMG/"))
-  (if (not (file-exists-p foldername))
-      (mkdir foldername))
+ ;; (setq foldername (concat (buffer-file-name) "-IMG/"))
+ ;; (setq foldername "e:/git/lust4life/img/")
+ ;; (if (not (file-exists-p foldername))
+ ;; (mkdir foldername))
 
-  ;; (setq imgName (concat "img_" (format-time-string "%Y_%m_%d__%H_%M_%S") ".png"))
-  (setq imgName (read-string "fileName:"))
-  (setq imgPath (concat (buffer-name) "-IMG/" imgName))
+ ;; (setq imgName (concat "img_" (format-time-string "%Y_%m_%d__%H_%M_%S") ".png"))
+ (setq imgName (read-string "fileName:"))
+ (setq imgPath (concat "./img/" (replace-regexp-in-string "\.[^.]*$" "" (buffer-name)) "/" imgName))
 
-  (call-process "perl" nil nil nil "E:/git/quick.dirty.perl/Perl STH/tools/pasteIntoFile.pl" (concat "-f=" imgPath))
+ (call-process "perl" nil nil nil "E:/git/quick.dirty.perl/Perl STH/tools/pasteIntoFile.pl" (concat "-f=" imgPath))
 
-  (setq relativeFilename (concat "./" imgPath))
-
-  (insert (concat "[[" relativeFilename "]]"))
-  )
+ (insert (concat "[[" imgPath "]]"))
+ )
 
 (global-set-key (kbd "C-c v") 'paste-img)
 
 ;; exports your Org documents to reveal.js presentations
-(require 'ox-reveal)
+;; (require 'ox-reveal)
 
 ;; 配置 org-publish
 (require 'org-publish-config)
