@@ -8,22 +8,14 @@
 ;;; Code:
 (setq org-publish-project-alist '(
                                   ("org-notes"
-                                   :base-directory "e:/git/lust4life/src/org/"
-                                   :publishing-directory "e:/git/lust4life/src/org-html/"
+                                   :base-directory "e:/git/blog.site.src/src/org/"
+                                   :publishing-directory "e:/git/blog.site.src/src/org-html/"
                                    :recursive t
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap t
                                    )
 
-                                  ("org-static"
-                                   :base-directory "e:/git/lust4life/src/org/"
-                                   :base-extension "gif\\|jpg\\|mp4\\|png"
-                                   :publishing-directory "e:/git/lust4life/src/org-html/"
-                                   :recursive t
-                                   :publishing-function org-publish-attachment
-                                   )
-
-                                  ("lust4life" :components ("org-notes" "org-static"))
+                                  ("lust4life" :components ("org-notes"))
                                   ))
 
 (defun publish-lust4life-site nil
