@@ -9,18 +9,16 @@
 (setq org-publish-project-alist '(
                                   ("org-notes"
                                    :base-directory "e:/git/lust4life/src/org/"
-                                   :publishing-directory "e:/git/lust4life/src/org/org-html/"
+                                   :publishing-directory "e:/git/lust4life/src/org-html/"
                                    :recursive t
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap t
-                                   :sitemap-filename "categories.org"
-                                   :sitemap-title "Categories"
                                    )
 
                                   ("org-static"
                                    :base-directory "e:/git/lust4life/src/org/"
-                                   :base-extension "jpg|mp4"
-                                   :publishing-directory "e:/git/lust4life/src/org/org-html/"
+                                   :base-extension "gif\\|jpg\\|mp4\\|png"
+                                   :publishing-directory "e:/git/lust4life/src/org-html/"
                                    :recursive t
                                    :publishing-function org-publish-attachment
                                    )
