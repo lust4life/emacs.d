@@ -44,3 +44,6 @@ site-lisp/
 
 /org-clock-save.el
 /ditaa*.jar
+/ido.last
+/recentf
+/viper
