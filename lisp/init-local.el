@@ -19,6 +19,7 @@
 (require 'prelude-perl)
 
 ;; directory tree
+(require-package 'dirtree)
 (require 'dirtree)
 
 ;; enable linum mode
