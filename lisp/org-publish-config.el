@@ -13,6 +13,9 @@
                                    :recursive t
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap t
+                                   :exclude "20\(08\|09\|10\|11\|12\|13\|14\)+"
+                                   :section-numbers nil
+                                   :sitemap-sort-files anti-chronologically
                                    )
 
                                   ("lust4life" :components ("org-notes"))
