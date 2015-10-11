@@ -16,6 +16,7 @@
  '(fci-rule-color "#eee8d5")
  '(org-agenda-files nil)
  '(org-export-default-language "zh")
+ '(org-export-with-section-numbers nil)
  '(org-html-doctype "html5")
  '(org-html-postamble t)
  '(org-html-postamble-format
