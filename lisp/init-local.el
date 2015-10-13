@@ -101,8 +101,13 @@
 ;; exports your Org documents to reveal.js presentations
 ;; (require 'ox-reveal)
 
+
 ;; 配置 org-publish
 (require 'org-publish-config)
+
+;; org mode customer
+(setq org-startup-indented t)
+
 
 
 (provide 'init-local)
