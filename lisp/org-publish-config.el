@@ -15,7 +15,7 @@
                                    :auto-sitemap t
                                    :exclude "20\(08\|09\|10\|11\|12\|13\|14\)+"
                                    :section-numbers nil
-                                   :sitemap-sort-files anti-chronologically
+                                   ;:sitemap-sort-files anti-chronologically ;; 这里会导致程序无响应
                                    )
 
                                   ("lust4life" :components ("org-notes"))
