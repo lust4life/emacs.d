@@ -1,6 +1,26 @@
-;; author: $+J
-;; e-mail: lust4life.jun@gmail.com
+;;; init-local  --- init local
+;;; Commentary:
+;;; author: $+J
+;;; e-mail: lust4life.jun@gmail.com
+;;; Code:
 
+;; exports your Org documents to reveal.js presentations
+(require-package 'ox-reveal)
+(require 'ox-reveal)
+(setq org-reveal-root "file:///E:/git/blog.site.src/src/org/reveal-test/reveal.js")
+
+;; directory tree
+(require-package 'dirtree)
+(require 'dirtree)
+
+;; 替换默认的 cperl mode
+(require 'prelude-perl)
+
+;; 配置 org-publish
+(require 'org-publish-config)
+
+;; org mode customer
+(setq org-startup-indented t)
 
 ;; 半透明
 (when window-system
@@ -15,17 +35,12 @@
       (setq alpha-list (cdr (append alpha-list (list h))))))
   (wf-toggle-alpha))
 
-;; 替换默认的 cperl mode
-(require 'prelude-perl)
-
-;; directory tree
-(require-package 'dirtree)
-(require 'dirtree)
 
 ;; enable linum mode
 (global-linum-mode 1) ; Always show line numbers
 (setq linum-format "%d") ; set format
 
+;;; 设置中英文字体,方便 org table 对齐
 
 ;; Setting English Font
 (set-face-attribute 'default nil :family "Input" :height 110)
@@ -37,20 +52,7 @@
                     (font-spec :family "Microsoft Yahei UI" :size 18)))
 
 
-
-;; run as a server mode
-(server-start)
-
-
-;; add org-page blog system static page generate
-;; (require 'org-page)
-;; (setq op/repository-directory "e:/git/lust4life/")   ;; the repository location
-;; (setq op/site-domain "http://lust4life.github.io/")         ;; your domain
-
-;;; the configuration below you should choose one, not both
-(setq op/personal-disqus-shortname "lust4life")    ;; your disqus commenting system
-
-;; about erc
+;;; about erc
 
 ;; joining && auto joinning
 (erc-autojoin-mode t)
@@ -76,38 +78,30 @@
 (global-set-key (kbd "C-c e") 'djcb-erc-start-or-switch) ;; ERC
 
 
- ;; use for paste clipboard image to org-mode
+;;; use for paste clipboard image to org-mode
 
 (defun paste-img ()
- "paste the img from clipboard to org-buffer int the same directory and insert a link "
- (interactive)
+  "paste the img from clipboard to org-buffer int the same directory and insert a link "
+  (interactive)
 
- ;; (setq foldername (concat (buffer-file-name) "-IMG/"))
- ;; (setq foldername "e:/git/lust4life/img/")
- ;; (if (not (file-exists-p foldername))
- ;; (mkdir foldername))
+  ;; (setq foldername (concat (buffer-file-name) "-IMG/"))
+  ;; (setq foldername "e:/git/lust4life/img/")
+  ;; (if (not (file-exists-p foldername))
+  ;; (mkdir foldername))
 
- ;; (setq imgName (concat "img_" (format-time-string "%Y_%m_%d__%H_%M_%S") ".png"))
- (setq imgName (read-string "fileName:"))
- (setq imgPath (concat "./img/" (replace-regexp-in-string "\.[^.]*$" "" (buffer-name)) "/" imgName))
+  ;; (setq imgName (concat "img_" (format-time-string "%Y_%m_%d__%H_%M_%S") ".png"))
+  (setq imgName (read-string "fileName:"))
+  (setq imgPath (concat "./img/" (replace-regexp-in-string "\.[^.]*$" "" (buffer-name)) "/" imgName))
 
- (call-process "perl" nil nil nil "E:/git/quick.dirty.perl/Perl STH/tools/pasteIntoFile.pl" (concat "-f=" imgPath))
+  (call-process "perl" nil nil nil "E:/git/quick.dirty.perl/Perl STH/tools/pasteIntoFile.pl" (concat "-f=" imgPath))
 
- (insert (concat "[[" imgPath "]]"))
- )
+  (insert (concat "[[" imgPath "]]"))
+  )
 
 (global-set-key (kbd "C-c v") 'paste-img)
 
-;; exports your Org documents to reveal.js presentations
-;; (require 'ox-reveal)
 
-
-;; 配置 org-publish
-(require 'org-publish-config)
-
-;; org mode customer
-(setq org-startup-indented t)
-
-
+;; run as a server mode
+(server-start)
 
 (provide 'init-local)
