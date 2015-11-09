@@ -30,6 +30,7 @@
    (quote
     (("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>
   <p>Modified: <span name=\"modified-date\">%C</span></p>"))))
+ '(org-reveal-root "http://libs.cdnjs.net/reveal.js/3.1.0/")
  '(org-startup-truncated t)
  '(safe-local-variable-values
    (quote
