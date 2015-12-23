@@ -49,7 +49,7 @@
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Microsoft Yahei UI" :size 18)))
+                    (font-spec :family "Microsoft YaHei UI" :size 18)))
 
 
 ;;; about erc
