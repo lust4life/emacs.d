@@ -46,10 +46,15 @@
 (set-face-attribute 'default nil :family "Input" :height 110)
 
 ;; Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
                     (font-spec :family "Microsoft YaHei UI" :size 18)))
+;; unicode symbol
+(dolist (charset '(symbol))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "Segoe UI Symbol" :size 16)))
 
 
 ;;; about erc
