@@ -15,6 +15,8 @@
     ("11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" "9960cc55931596d259ec3673ea7139c0090f21be4bd64728eefac0c949c843af" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(fci-rule-color "#eee8d5")
  '(org-agenda-files nil)
+ '(org-export-async-init-file
+   "c:/Users/lust4/AppData/Roaming/.emacs.d/init-4-org-export.el")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
  '(org-html-doctype "html5")
