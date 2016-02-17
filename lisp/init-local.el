@@ -107,6 +107,6 @@
 
 
 ;; run as a server mode
-(server-start)
+;(server-start)
 
 (provide 'init-local)

@@ -22,12 +22,12 @@
                                   ))
 
 ;; debug async export
-(setq org-export-async-debug t)
+;(setq org-export-async-debug t)
 
 (defun publish-lust4life-site nil
   "Publish lust4life site project."
   (interactive)
-  (org-publish-project "lust4life")
+  (org-publish-project "lust4life" nil t)
   )
 
 (provide 'org-publish-config)
