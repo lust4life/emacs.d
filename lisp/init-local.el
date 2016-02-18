@@ -106,7 +106,4 @@
 (global-set-key (kbd "C-c v") 'paste-img)
 
 
-;; run as a server mode
-;(server-start)
-
 (provide 'init-local)

@@ -23,7 +23,7 @@
 
 (defun publish-lust4life-site nil
   "Publish lust4life site project."
-  (Interactive)
+  (interactive)
   (org-publish-project "lust4life" nil t)
   )
 

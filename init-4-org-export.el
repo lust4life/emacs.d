@@ -1,5 +1,3 @@
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,3 +25,9 @@
 
 ;; debug async export
 (setq org-export-async-debug t)
+
+
+(add-to-list 'load-path (expand-file-name "elpa/htmlize-20130207.1202/" user-emacs-directory))
+
+;; for convert text to html
+(require 'htmlize)
