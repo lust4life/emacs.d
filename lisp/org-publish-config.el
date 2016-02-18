@@ -21,12 +21,9 @@
                                   ("lust4life" :components ("org-notes"))
                                   ))
 
-;; debug async export
-;(setq org-export-async-debug t)
-
 (defun publish-lust4life-site nil
   "Publish lust4life site project."
-  (interactive)
+  (Interactive)
   (org-publish-project "lust4life" nil t)
   )
 

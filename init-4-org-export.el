@@ -25,36 +25,5 @@
  '(org-reveal-root "http://lust4life.github.io/slide/reveal/")
  '(org-startup-truncated t))
 
-
-;;; Code;
-(require 'ox-publish)
-
-;;; Code:
-(setq org-publish-project-alist '(
-                                  ("org-notes"
-                                   :base-directory "e:/git/blog.site.src/src/org/"
-                                   :publishing-directory "e:/git/blog.site.src/src/org-html/"
-                                   :recursive t
-                                   :publishing-function org-html-publish-to-html
-                                   :auto-sitemap nil ; 这里先尝试不用生成 sitemap，貌似比较费时
-                                   :exclude ".*20\\(08\\|09\\|10\\|11\\|12\\|13\\|14\\|15\\).*"
-                                   :section-numbers nil
-                                        ;:sitemap-sort-files anti-chronologically ;; 这里会导致程序无响应
-                                   )
-
-                                  ("lust4life" :components ("org-notes"))
-                                  ))
-
 ;; debug async export
-;(setq org-export-async-debug t)
-
-(defun publish-lust4life-site nil
-  "Publish lust4life site project."
-  (interactive)
-  (org-publish-project "lust4life" nil t)
-  )
-
-
-;(require 'org)
-;(require 'ox)
-;(require 'cl)
+(setq org-export-async-debug t)
