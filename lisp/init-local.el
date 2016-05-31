@@ -13,6 +13,10 @@
 (require-package 'dirtree)
 (require 'dirtree)
 
+;; fsharp mode pkg
+(require-package 'fsharp-mode)
+(require 'fsharp-mode)
+
 ;; 替换默认的 cperl mode
 (require 'prelude-perl)
 
