@@ -109,5 +109,6 @@
 
 (global-set-key (kbd "C-c v") 'paste-img)
 
+(setq system-time-locale "C")
 
 (provide 'init-local)
