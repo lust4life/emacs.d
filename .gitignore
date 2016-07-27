@@ -50,3 +50,5 @@ site-lisp/
 /recentf
 /viper
 /projectile-bookmarks.eld
+
+projectile.cache
