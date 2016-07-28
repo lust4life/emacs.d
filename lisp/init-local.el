@@ -13,6 +13,10 @@
 (require-package 'dirtree)
 (require 'dirtree)
 
+;; fsharp mode pkg
+(require-package 'fsharp-mode)
+(require 'fsharp-mode)
+
 ;; 替换默认的 cperl mode
 (require 'prelude-perl)
 
@@ -62,7 +66,7 @@
 ;; joining && auto joinning
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
-      '((".*\\.freenode.net" "#emacs" "#perl" "#perl6" "##csharp" "##asp.net" "#Powershell" "#prometheus" "#gitlab")))
+      '((".*\\.freenode.net" "#emacs" "#perl" "#perl6" "##csharp" "##asp.net" "#Powershell" "#prometheus" "#gitlab" "##fsharp")))
 
 ;; check channels
 (erc-track-mode t)
@@ -105,5 +109,6 @@
 
 (global-set-key (kbd "C-c v") 'paste-img)
 
+(setq system-time-locale "C")
 
 (provide 'init-local)
