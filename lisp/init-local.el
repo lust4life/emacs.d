@@ -53,7 +53,7 @@
 (dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Microsoft YaHei UI" :size 18)))
+                    (font-spec :family "Microsoft YaHei UI" :size 32)))
 ;; unicode symbol
 (dolist (charset '(symbol))
   (set-fontset-font (frame-parameter nil 'font)
