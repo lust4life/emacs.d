@@ -47,18 +47,20 @@
 ;;; 设置中英文字体,方便 org table 对齐
 
 ;; Setting English Font
-(set-face-attribute 'default nil :family "Input" :height 110)
+(set-face-attribute 'default nil :font "Input" :height 110)
 
 ;; Chinese Font
+
 (dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
                     (font-spec :family "Microsoft YaHei UI" :size 32)))
+
 ;; unicode symbol
 (dolist (charset '(symbol))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Segoe UI Symbol" :size 16)))
+                    (font-spec :family "Segoe UI Emoji" :size 32)))
 
 
 ;;; about erc
