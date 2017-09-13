@@ -57,3 +57,4 @@ projectile.cache
 /.historian
 /.uptimes.el
 /rake.cache
+/plantuml.jar

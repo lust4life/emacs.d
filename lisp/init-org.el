@@ -1,4 +1,4 @@
-(require-package 'org-fstree)
+(maybe-require-package 'org-fstree)
 (when *is-a-mac*
   (maybe-require-package 'grab-mac-link)
   (require-package 'org-mac-iCal))
@@ -47,7 +47,18 @@
       (unless (file-exists-p org-ditaa-jar-path)
         (sanityinc/grab-ditaa url jar-name)))))
 
+(after-load 'ob-plantuml
+  (let ((jar-name "plantuml.jar")
+        (url "https://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
+    (setq org-plantuml-jar-path (expand-file-name jar-name (file-name-directory user-init-file)))
+    (unless (file-exists-p org-plantuml-jar-path)
+      (url-copy-file url org-plantuml-jar-path))))
+
+
+
 
+
+(maybe-require-package 'writeroom-mode)
 
 (define-minor-mode prose-mode
   "Set up a buffer for prose editing.
@@ -57,6 +68,8 @@ typical word processor."
   nil " Prose" nil
   (if prose-mode
       (progn
+        (when (fboundp 'writeroom-mode)
+          (writeroom-mode 1))
         (setq truncate-lines nil)
         (setq word-wrap t)
         (setq cursor-type 'bar)
@@ -66,7 +79,7 @@ typical word processor."
         ;;(delete-selection-mode 1)
         (set (make-local-variable 'blink-cursor-interval) 0.6)
         (set (make-local-variable 'show-trailing-whitespace) nil)
-        (flyspell-mode 1)
+        (ignore-errors (flyspell-mode 1))
         (visual-line-mode 1))
     (kill-local-variable 'truncate-lines)
     (kill-local-variable 'word-wrap)
@@ -75,7 +88,9 @@ typical word processor."
     (buffer-face-mode -1)
     ;; (delete-selection-mode -1)
     (flyspell-mode -1)
-    (visual-line-mode -1)))
+    (visual-line-mode -1)
+    (when (fboundp 'writeroom-mode)
+      (writeroom-mode 0))))
 
 ;;(add-hook 'org-mode-hook 'buffer-face-mode)
 
@@ -87,7 +102,7 @@ typical word processor."
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
-      `(("t" "todo" entry (file "")  ; "" => org-default-notes-file
+      `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
          "* NEXT %?\n%U\n" :clock-resume t)
         ("n" "note" entry (file "")
          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
@@ -99,7 +114,7 @@ typical word processor."
 
 (setq org-refile-use-cache nil)
 
-; Targets include this file and any file contributing to the agenda - up to 5 levels deep
+;; Targets include this file and any file contributing to the agenda - up to 5 levels deep
 (setq org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
 
 (after-load 'org-agenda
@@ -185,11 +200,14 @@ typical word processor."
                     (org-agenda-tags-todo-honor-ignore-options t)
                     (org-tags-match-list-sublevels t)
                     (org-agenda-todo-ignore-scheduled 'future)))
-            (tags-todo "-INBOX/NEXT"
+            (tags-todo "-INBOX"
                        ((org-agenda-overriding-header "Next Actions")
                         (org-agenda-tags-todo-honor-ignore-options t)
                         (org-agenda-todo-ignore-scheduled 'future)
-                        ;; TODO: skip if a parent is WAITING or HOLD
+                        (org-agenda-skip-function
+                         '(lambda ()
+                            (or (org-agenda-skip-subtree-if 'todo '("HOLD" "WAITING"))
+                                (org-agenda-skip-entry-if 'nottodo '("NEXT")))))
                         (org-tags-match-list-sublevels t)
                         (org-agenda-sorting-strategy
                          '(todo-state-down effort-up category-keep))))
@@ -202,7 +220,6 @@ typical word processor."
                        ((org-agenda-overriding-header "Orphaned Tasks")
                         (org-agenda-tags-todo-honor-ignore-options t)
                         (org-agenda-todo-ignore-scheduled 'future)
-                        ;; TODO: skip if a parent is a project
                         (org-agenda-skip-function
                          '(lambda ()
                             (or (org-agenda-skip-subtree-if 'todo '("PROJECT" "HOLD" "WAITING" "DELEGATED"))
@@ -222,9 +239,12 @@ typical word processor."
                         (org-agenda-todo-ignore-scheduled 'future)
                         (org-agenda-sorting-strategy
                          '(category-keep))))
-            (tags-todo "-INBOX/HOLD"
+            (tags-todo "-INBOX"
                        ((org-agenda-overriding-header "On Hold")
-                        ;; TODO: skip if a parent is WAITING or HOLD
+                        (org-agenda-skip-function
+                         '(lambda ()
+                            (or (org-agenda-skip-subtree-if 'todo '("WAITING"))
+                                (org-agenda-skip-entry-if 'nottodo '("HOLD")))))
                         (org-tags-match-list-sublevels nil)
                         (org-agenda-sorting-strategy
                          '(category-keep))))
@@ -357,6 +377,7 @@ typical word processor."
      (ledger . t)
      (ocaml . nil)
      (octave . t)
+     (plantuml . t)
      (python . t)
      (ruby . t)
      (screen . nil)
