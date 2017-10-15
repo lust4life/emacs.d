@@ -68,7 +68,7 @@
 ;; joining && auto joinning
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
-      '((".*\\.freenode.net" "#emacs" "#org-mode" "#perl6" "##fsharp" )))
+      '((".*\\.freenode.net" "#emacs" "#org-mode" "#perl6" )))
 
 ;; check channels
 (erc-track-mode t)
