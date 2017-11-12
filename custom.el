@@ -39,6 +39,7 @@
      (ruby-compilation-executable . "ruby1.9")
      (ruby-compilation-executable . "rbx")
      (ruby-compilation-executable . "jruby"))))
+ '(send-mail-function (quote mailclient-send-it))
  '(session-use-package t nil (session))
  '(user-full-name "$+j")
  '(user-mail-address "lust4life.jun@gmail.com"))
