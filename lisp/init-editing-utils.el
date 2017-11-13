@@ -36,6 +36,9 @@
 (add-hook 'after-init-hook 'transient-mark-mode)
 
 
+(when (maybe-require-package 'dynamic-spaces)
+  (dynamic-spaces-global-mode))
+
  ;;; A simple visible bell which works in all terminal types
 
 (defun sanityinc/flash-mode-line ()
@@ -191,10 +194,10 @@
 ;;----------------------------------------------------------------------------
 ;; Page break lines
 ;;----------------------------------------------------------------------------
-(require-package 'page-break-lines)
-(add-hook 'after-init-hook 'global-page-break-lines-mode)
-(after-load 'page-break-lines
-  (diminish 'page-break-lines-mode))
+(when (maybe-require-package 'page-break-lines)
+  (add-hook 'after-init-hook 'global-page-break-lines-mode)
+  (after-load 'page-break-lines
+    (diminish 'page-break-lines-mode)))
 
 ;;----------------------------------------------------------------------------
 ;; Shift lines up and down with M-up and M-down. When paredit is enabled,
