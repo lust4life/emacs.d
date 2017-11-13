@@ -32,47 +32,47 @@
    (quote
     (("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>
     <p>Modified: <span name=\"modified-date\">%C</span></p>"))))
-   '(org-reveal-root "http://lust4life.github.io/slide/reveal/")
-   '(org-startup-truncated t)
-   '(package-selected-packages
-     (quote
-      (yari yaml-mode yagist whole-line-or-region whitespace-cleanup-mode wgrep vc-darcs unfill undo-tree tidy textile-mode tagedit switch-window sql-indent smex smarty-mode slime-company skewer-less session scss-mode scratch sass-mode ruby-hash-syntax rspec-mode robe rinari regex-tool redshank rainbow-mode rainbow-delimiters projectile-rails project-local-variables pip-requirements php-mode paredit-everywhere page-break-lines ox-reveal origami org-pomodoro org-fstree org-cliplink nvm nlinum mwe-log-commands multiple-cursors move-dup mmm-mode markdown-mode magit-gh-pulls lua-mode lively less-css-mode ledger-mode json-mode js-comint ipretty intero indent-guide immortal-scratch idomenu ido-ubiquitous ibuffer-vc htmlize hl-sexp hippie-expand-slime hindent highlight-symbol highlight-quoted highlight-escape-sequences hayoo guide-key goto-gem gnuplot gitignore-mode github-issues github-clone github-browse-file gitconfig-mode git-timemachine git-messenger git-blame ghci-completion fullframe fsharp-mode flycheck-package flycheck-ledger flycheck-hdevtools flycheck-haskell flycheck-elm flycheck-clojure fill-column-indicator expand-region exec-path-from-shell erlang elm-mode elisp-slime-nav elein dsvn disable-mouse dirtree dired-sort dired+ diminish diff-hl default-text-scale darcsum csv-nav csv-mode css-eldoc crontab-mode counsel company-ghci company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cljsbuild-mode cl-lib-highlight cask-mode bundler bug-reference-github browse-kill-ring browse-at-remote avy auto-compile anzu aggressive-indent adjust-parens)))
-   '(safe-local-variable-values
-     (quote
-      ((no-byte-compile t)
-       (ruby-compilation-executable . "ruby")
-       (ruby-compilation-executable . "ruby1.8")
-       (ruby-compilation-executable . "ruby1.9")
-       (ruby-compilation-executable . "rbx")
-       (ruby-compilation-executable . "jruby"))))
-   '(session-use-package t nil (session))
-   '(show-paren-mode t)
-   '(tidy-config-file "")
-   '(tool-bar-mode nil)
-   '(user-full-name "$+j")
-   '(user-mail-address "lust4life.jun@gmail.com")
-   '(vc-annotate-background nil)
-   '(vc-annotate-color-map
-     (quote
-      ((20 . "#dc322f")
-       (40 . "#cb4b16")
-       (60 . "#b58900")
-       (80 . "#859900")
-       (100 . "#2aa198")
-       (120 . "#268bd2")
-       (140 . "#d33682")
-       (160 . "#6c71c4")
-       (180 . "#dc322f")
-       (200 . "#cb4b16")
-       (220 . "#b58900")
-       (240 . "#859900")
-       (260 . "#2aa198")
-       (280 . "#268bd2")
-       (300 . "#d33682")
-       (320 . "#6c71c4")
-       (340 . "#dc322f")
-       (360 . "#cb4b16"))))
-   '(vc-annotate-very-old-color nil))
+ '(org-reveal-root "http://lust4life.github.io/slide/reveal/")
+ '(org-startup-truncated t)
+ '(package-selected-packages
+   (quote
+    (yari yaml-mode yagist whole-line-or-region whitespace-cleanup-mode wgrep vc-darcs unfill undo-tree tidy textile-mode tagedit switch-window sql-indent smex smarty-mode slime-company skewer-less session scss-mode scratch sass-mode ruby-hash-syntax rspec-mode robe rinari regex-tool redshank rainbow-mode rainbow-delimiters projectile-rails project-local-variables pip-requirements php-mode paredit-everywhere page-break-lines ox-reveal origami org-pomodoro org-fstree org-cliplink nvm nlinum mwe-log-commands multiple-cursors move-dup mmm-mode markdown-mode magit-gh-pulls lua-mode lively less-css-mode ledger-mode json-mode js-comint ipretty intero indent-guide immortal-scratch idomenu ido-ubiquitous ibuffer-vc htmlize hl-sexp hippie-expand-slime hindent highlight-symbol highlight-quoted highlight-escape-sequences hayoo guide-key goto-gem gnuplot gitignore-mode github-issues github-clone github-browse-file gitconfig-mode git-timemachine git-messenger git-blame ghci-completion fullframe fsharp-mode flycheck-package flycheck-ledger flycheck-hdevtools flycheck-haskell flycheck-elm flycheck-clojure fill-column-indicator expand-region exec-path-from-shell erlang elm-mode elisp-slime-nav elein dsvn disable-mouse dirtree dired-sort dired+ diminish diff-hl default-text-scale darcsum csv-nav csv-mode css-eldoc crontab-mode counsel company-ghci company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cljsbuild-mode cl-lib-highlight cask-mode bundler bug-reference-github browse-kill-ring browse-at-remote avy auto-compile anzu aggressive-indent adjust-parens)))
+ '(safe-local-variable-values
+   (quote
+    ((no-byte-compile t)
+     (ruby-compilation-executable . "ruby")
+     (ruby-compilation-executable . "ruby1.8")
+     (ruby-compilation-executable . "ruby1.9")
+     (ruby-compilation-executable . "rbx")
+     (ruby-compilation-executable . "jruby"))))
+ '(session-use-package t nil (session))
+ '(show-paren-mode t)
+ '(tidy-config-file "")
+ '(tool-bar-mode nil)
+ '(user-full-name "$+j")
+ '(user-mail-address "lust4life.jun@gmail.com")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#cb4b16")
+     (60 . "#b58900")
+     (80 . "#859900")
+     (100 . "#2aa198")
+     (120 . "#268bd2")
+     (140 . "#d33682")
+     (160 . "#6c71c4")
+     (180 . "#dc322f")
+     (200 . "#cb4b16")
+     (220 . "#b58900")
+     (240 . "#859900")
+     (260 . "#2aa198")
+     (280 . "#268bd2")
+     (300 . "#d33682")
+     (320 . "#6c71c4")
+     (340 . "#dc322f")
+     (360 . "#cb4b16"))))
+ '(vc-annotate-very-old-color nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
