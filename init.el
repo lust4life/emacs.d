@@ -95,17 +95,20 @@
 (require 'init-css)
 (require 'init-haml)
 (require 'init-http)
-(require 'init-python-mode)
+(require 'init-python)
 (require 'init-haskell)
 (require 'init-elm)
-(require 'init-ruby-mode)
+(require 'init-purescript)
+(require 'init-ruby)
 (require 'init-rails)
 (require 'init-sql)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
-(maybe-require-package 'terraform-mode)
+(require 'init-terraform)
+(require 'init-nix)
+(maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
 (require 'init-lisp)
@@ -131,6 +134,7 @@
 (when *is-a-mac*
   (require-package 'osx-location))
 (maybe-require-package 'regex-tool)
+(maybe-require-package 'dotenv-mode)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
