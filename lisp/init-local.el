@@ -5,9 +5,9 @@
 ;;; Code:
 
 ;; exports your Org documents to reveal.js presentations
-(require-package 'ox-reveal)
-(require 'ox-reveal)
-(setq org-reveal-root "file:///E:/git/blog.site.src/src/org/reveal-test/reveal.js")
+;; (require-package 'org-re-reveal)
+;; (require 'org-re-reveal)
+
 
 ;; directory tree
 (require-package 'dirtree)
