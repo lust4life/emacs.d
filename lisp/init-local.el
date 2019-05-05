@@ -46,7 +46,7 @@
 
 ;;; 设置中英文字体,方便 org table 对齐
 ;; Setting English Font
-(set-face-attribute 'default nil :font (font-spec :name "Input" :size 16))
+(set-face-attribute 'default nil :font (font-spec :name "Input" :size 28))
 
 ;; Chinese Font
 (dolist (charset '(kana han cjk-misc bopomofo))
