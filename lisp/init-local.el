@@ -47,13 +47,17 @@
 
 ;;; 设置中英文字体,方便 org table 对齐
 ;; Setting English Font
-(set-face-attribute 'default nil :font (font-spec :name "Input" :size 18))
+(set-face-attribute 'default nil :font (font-spec :name "Input" :size 14))
+
+(setq fonts
+      (cond ((eq system-type 'darwin)     '("STHeiti" 16))
+            ((eq system-type 'gnu/linux)  '("WenQuanYi Zen Hei" 32))
+            ((eq system-type 'windows-nt) '("Microsoft Yahei" 32))))
 
 ;; Chinese Font
-(dolist (charset '(kana han cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "Microsoft YaHei UI" :size 34)))
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font) charset
+                    (font-spec :family (car fonts) :size (car (cdr fonts)))))
 
 ;; unicode symbol
 (dolist (charset '(symbol))
