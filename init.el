@@ -105,6 +105,7 @@
 (require 'init-ruby)
 (require 'init-rails)
 (require 'init-sql)
+(require 'init-nim)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
@@ -150,6 +151,8 @@
 
 (when (fboundp 'global-eldoc-mode)
   (add-hook 'after-init-hook 'global-eldoc-mode))
+
+(require 'init-direnv)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
