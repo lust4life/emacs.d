@@ -134,8 +134,8 @@ same directory as the org-buffer and insert a link to this file."
 
 (setq system-time-locale "C")
 
-
-
+;; disable linum since we have global-display-line-mode
+(global-linum-mode 0)
 
 
 (provide 'init-local)
