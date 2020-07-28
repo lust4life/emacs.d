@@ -18,6 +18,14 @@
 (require-package 'fsharp-mode)
 (require 'fsharp-mode)
 
+;; org-download
+(require-package 'org-download)
+(require 'org-download)
+
+;; org-download
+(require-package 'org-journal)
+(require 'org-journal)
+
 ;; 替换默认的 cperl mode
 (require 'prelude-perl)
 
