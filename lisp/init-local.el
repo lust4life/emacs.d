@@ -58,14 +58,18 @@
 (set-face-attribute 'default nil :font (font-spec :name "Input" :size 14))
 
 (setq fonts
-      (cond ((eq system-type 'darwin)     '("STHeiti" 16))
+      (cond ((eq system-type 'darwin)     '("PingFang SC" 16))
             ((eq system-type 'gnu/linux)  '("WenQuanYi Zen Hei" 32))
             ((eq system-type 'windows-nt) '("Microsoft Yahei" 32))))
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font) charset
-                    (font-spec :family (car fonts) :size (car (cdr fonts)))))
+                    (font-spec :family (car fonts) )))
+
+;; do not set size, since this will affect when scale text
+;; so only set rescale
+(setq face-font-rescale-alist '(("PingFang SC" . 1.2)))
 
 ;; unicode symbol
 (dolist (charset '(symbol))
