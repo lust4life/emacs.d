@@ -149,5 +149,7 @@ same directory as the org-buffer and insert a link to this file."
 ;; disable linum since we have global-display-line-mode
 (global-linum-mode 0)
 
+;; display “lambda” as “λ”
+(global-prettify-symbols-mode 1)
 
 (provide 'init-local)
