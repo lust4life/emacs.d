@@ -152,4 +152,9 @@ same directory as the org-buffer and insert a link to this file."
 ;; display “lambda” as “λ”
 (global-prettify-symbols-mode 1)
 
+
+;; enable paredit in scheme
+(add-hook 'scheme-mode-hook 'paredit-mode)
+
+
 (provide 'init-local)
