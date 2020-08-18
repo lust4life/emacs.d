@@ -20,10 +20,6 @@
 (require-package 'helm-org-rifle)
 (require 'helm-org-rifle)
 
-;; directory tree
-(require-package 'dirtree)
-(require 'dirtree)
-
 ;; org-download
 (require-package 'org-download)
 (require 'org-download)
