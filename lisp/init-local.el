@@ -10,13 +10,19 @@
 (require-package 'ox-reveal)
 (require 'ox-reveal)
 
+(require-package 'pdf-tools)
+(require 'pdf-tools)
+(require-package 'org-noter)
+(require 'org-noter)
+
+(require-package 'youdao-dictionary)
+(require 'youdao-dictionary)
+(require-package 'helm-org-rifle)
+(require 'helm-org-rifle)
+
 ;; directory tree
 (require-package 'dirtree)
 (require 'dirtree)
-
-;; fsharp mode pkg
-(require-package 'fsharp-mode)
-(require 'fsharp-mode)
 
 ;; org-download
 (require-package 'org-download)
@@ -80,7 +86,7 @@
 
 
 ;;; about erc
-
+(require 'erc-join)
 ;; joining && auto joinning
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
