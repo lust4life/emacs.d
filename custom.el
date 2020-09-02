@@ -7,7 +7,7 @@
  '(dired-listing-switches "-hal")
  '(erc-email-userid "lust4life.jun@gmail.com")
  '(org-agenda-files
-   '("/Users/jiajun.qian/git/blog.site.src/src/org/journal/20200801"))
+   '("/Users/jiajun.qian/git/blog.site.src/src/org/journal/20200901"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-async-init-file "~/.emacs.d/init-4-org-export.el")
  '(org-export-default-language "zh")
