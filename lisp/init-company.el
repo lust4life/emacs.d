@@ -14,6 +14,12 @@
     (dolist (backend '(company-eclim company-semantic))
       (delq backend company-backends))
     (diminish 'company-mode)
+    (defun sanityinc/company-icons-margin-auto (&rest args)
+      (apply (if (eq 'dark (frame-parameter nil 'background-mode))
+                 #'company-vscode-dark-icons-margin
+               #'company-vscode-light-icons-margin)
+             args))
+    (setq company-format-margin-function #'sanityinc/company-icons-margin-auto)
     (define-key company-mode-map (kbd "M-/") 'company-complete)
     (define-key company-mode-map [remap completion-at-point] 'company-complete)
     (define-key company-mode-map [remap indent-for-tab-command] 'company-indent-or-complete-common)
@@ -27,24 +33,6 @@
   (global-set-key (kbd "M-C-/") 'company-complete)
   (when (maybe-require-package 'company-quickhelp)
     (add-hook 'after-init-hook 'company-quickhelp-mode)))
-
-;; Suspend page-break-lines-mode while company menu is active
-;; (see https://github.com/company-mode/company-mode/issues/416)
-(with-eval-after-load 'company
-  (with-eval-after-load 'page-break-lines
-    (defvar-local sanityinc/page-break-lines-on-p nil)
-
-    (defun sanityinc/page-break-lines-disable (&rest ignore)
-      (when (setq sanityinc/page-break-lines-on-p (bound-and-true-p page-break-lines-mode))
-        (page-break-lines-mode -1)))
-
-    (defun sanityinc/page-break-lines-maybe-reenable (&rest ignore)
-      (when sanityinc/page-break-lines-on-p
-        (page-break-lines-mode 1)))
-
-    (add-hook 'company-completion-started-hook 'sanityinc/page-break-lines-disable)
-    (add-hook 'company-after-completion-hook 'sanityinc/page-break-lines-maybe-reenable)))
-
 
 
 (provide 'init-company)
