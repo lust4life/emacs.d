@@ -31,4 +31,4 @@
 (add-to-list 'load-path (expand-file-name "elpa/htmlize-20130207.1202/" user-emacs-directory))
 
 ;; for convert text to html
-(require 'htmlize)
+;;(require 'htmlize)
