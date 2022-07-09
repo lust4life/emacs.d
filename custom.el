@@ -7,7 +7,7 @@
  '(dired-listing-switches "-hal")
  '(erc-email-userid "lust4life.jun@gmail.com")
  '(org-agenda-files
-   '("/Users/jiajun.qian/git/blog.site.src/src/org/life/day-time-plan.org" "/Users/jiajun.qian/git/blog.site.src/src/org/journal/20220501" "/Users/j/git/blog.site.src/src/org/journal/20220601"))
+   '("/Users/jiajun.qian/git/blog.site.src/src/org/life/day-time-plan.org" "/Users/jiajun.qian/git/blog.site.src/src/org/journal/20220501" "/Users/j/git/blog.site.src/src/org/journal/20220701"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
