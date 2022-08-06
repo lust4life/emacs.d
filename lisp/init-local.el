@@ -158,5 +158,10 @@ same directory as the org-buffer and insert a link to this file."
 ;; enable paredit in scheme
 (add-hook 'scheme-mode-hook 'paredit-mode)
 
+;; add support for oxs-dictionary
+(require-package 'osx-dictionary)
+(require 'osx-dictionary)
+
+(global-set-key (kbd "C-c j") 'osx-dictionary-search-word-at-point)
 
 (provide 'init-local)
