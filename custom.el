@@ -7,7 +7,7 @@
  '(dired-listing-switches "-hal")
  '(erc-email-userid "lust4life.jun@gmail.com")
  '(org-agenda-files
-   '("/Users/jiajun.qian/git/blog.site.src/src/org/life/day-time-plan.org" "/Users/jiajun.qian/git/blog.site.src/src/org/journal/20220501" "/Users/j/git/blog.site.src/src/org/journal/20220701" "/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20220801"))
+   '("/Users/jiajun.qian/git/blog.site.src/src/org/life/day-time-plan.org" "/Users/jiajun.qian/git/blog.site.src/src/org/journal/20220501" "/Users/j/git/blog.site.src/src/org/journal/20220801"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
@@ -23,7 +23,7 @@
    '(("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>
   <p>Modified: <span name=\"modified-date\">%C</span></p>")))
  '(org-image-actual-width '(250))
- '(org-journal-dir "~/git/lust4life/blog.site.src/src/org/journal")
+ '(org-journal-dir "~/git/blog.site.src/src/org/journal")
  '(org-journal-enable-agenda-integration t)
  '(org-journal-file-type 'monthly)
  '(org-reveal-reveal-js-version 4)
