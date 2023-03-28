@@ -7,7 +7,7 @@
  '(dired-listing-switches "-hal")
  '(erc-email-userid "lust4life.jun@gmail.com")
  '(org-agenda-files
-   '("/Users/j/git/lust4life/blog.site.src/src/org/journal/20220901" "/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20230201"))
+   '("/Users/j/git/lust4life/blog.site.src/src/org/journal/20220901" "/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20230301"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
@@ -36,7 +36,9 @@
    "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
  '(session-use-package t nil (session))
  '(user-full-name "Jun")
- '(user-mail-address "lust4life.jun@gmail.com"))
+ '(user-mail-address "lust4life.jun@gmail.com")
+ '(youdao-dictionary-app-key "0c1f54337ef6331c")
+ '(youdao-dictionary-secret-key "WaPTujpgpkPYo4jxFcKTi8RxAq2dBfCf"))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
