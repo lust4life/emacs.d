@@ -51,10 +51,6 @@
   (wf-toggle-alpha))
 
 
-;; enable linum mode
-(global-linum-mode 1) ; Always show line numbers
-(setq linum-format "%d") ; set format
-
 ;;; 设置中英文字体,方便 org table 对齐
 ;; Setting English Font
 (set-face-attribute 'default nil :font (font-spec :name "Input" :size 14))
@@ -148,8 +144,9 @@ same directory as the org-buffer and insert a link to this file."
 
 (setq system-time-locale "C")
 
-;; disable linum since we have global-display-line-mode
-(global-linum-mode 0)
+;; global-display-line-mode
+(global-display-line-numbers-mode 1)
+
 
 ;; display “lambda” as “λ”
 (global-prettify-symbols-mode 1)

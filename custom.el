@@ -7,21 +7,16 @@
  '(dired-listing-switches "-hal")
  '(erc-email-userid "lust4life.jun@gmail.com")
  '(org-agenda-files
-   '("/Users/j/git/lust4life/blog.site.src/src/org/journal/20220901" "/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20230701"))
+   '("/Users/j/git/lust4life/blog.site.src/src/org/journal/20220901" "/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20230801"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
  '(org-html-doctype "html5")
  '(org-html-postamble t)
  '(org-html-postamble-format
-   '(("zh" "<p class=\"author\">Author: %a (%e)</p>
-            <p class=\"date\">Created: %d</p>
-            <p>Modified: %C</p>
-            <p class=\"creator\">Build With %c</p>
-<p><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"知识共享许可协议\" style=\"border-width: 0\" src=\"https://i.creativecommons.org/l/by-nc/4.0/88x31.png\"/></a></p>")))
+   '(("zh" "<p class=\"author\">Author: %a (%e)</p>\12            <p class=\"date\">Created: %d</p>\12            <p>Modified: %C</p>\12            <p class=\"creator\">Build With %c</p>\12<p><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"知识共享许可协议\" style=\"border-width: 0\" src=\"https://i.creativecommons.org/l/by-nc/4.0/88x31.png\"/></a></p>")))
  '(org-html-preamble-format
-   '(("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>
-  <p>Modified: <span name=\"modified-date\">%C</span></p>")))
+   '(("zh" "  <p>Created : <span name=\"create-date\">%d</span></p>\12  <p>Modified: <span name=\"modified-date\">%C</span></p>")))
  '(org-image-actual-width '(250))
  '(org-journal-dir "~/git/lust4life/blog.site.src/src/org/journal")
  '(org-journal-enable-agenda-integration t)
