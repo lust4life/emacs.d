@@ -161,4 +161,9 @@ same directory as the org-buffer and insert a link to this file."
 
 (global-set-key (kbd "C-c j") 'osx-dictionary-search-word-at-point)
 
+;; set buffer name with word in osx-dictionary to let it create multi buffers
+(setq osx-dictionary-generate-buffer-name-function
+      (lambda (word)
+        (format "*osx-dict-<%s>*" word)))
+
 (provide 'init-local)
