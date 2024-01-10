@@ -50,24 +50,21 @@
       (setq alpha-list (cdr (append alpha-list (list h))))))
   (wf-toggle-alpha))
 
-
 ;;; 设置中英文字体,方便 org table 对齐
 ;; Setting English Font
 (set-face-attribute 'default nil :font (font-spec :name "Input" :size 14))
 
-(setq fonts
-      (cond ((eq system-type 'darwin)     '("PingFang SC" 16))
-            ((eq system-type 'gnu/linux)  '("WenQuanYi Zen Hei" 32))
-            ((eq system-type 'windows-nt) '("Microsoft YaHei" 32))))
+(setq font (cond ((eq system-type 'darwin)     (font-spec :family "PingFang SC"))
+                 ((eq system-type 'gnu/linux)  (font-spec :family "WenQuanYi Zen Hei"))
+                 ((eq system-type 'windows-nt) (font-spec :family "Microsoft YaHei"))))
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font) charset
-                    (font-spec :family (car fonts) )))
+  (set-fontset-font t charset font))
 
-;; do not set size, since this will affect when scale text
-;; so only set rescale
-(setq face-font-rescale-alist '(("PingFang SC" . 1.2)))
+;; do not set size in above, since this will affect when scale text, so only set rescale
+(setq face-font-rescale-alist (cons (cons font 1.2) nil))
+
 
 ;; unicode symbol 🐈
 (dolist (charset '(symbol))
