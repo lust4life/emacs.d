@@ -58,7 +58,7 @@
 (setq fonts
       (cond ((eq system-type 'darwin)     '("PingFang SC" 16))
             ((eq system-type 'gnu/linux)  '("WenQuanYi Zen Hei" 32))
-            ((eq system-type 'windows-nt) '("Microsoft Yahei" 32))))
+            ((eq system-type 'windows-nt) '("Microsoft YaHei" 32))))
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
@@ -69,12 +69,11 @@
 ;; so only set rescale
 (setq face-font-rescale-alist '(("PingFang SC" . 1.2)))
 
-;; unicode symbol
+;; unicode symbol 🐈
 (dolist (charset '(symbol))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
                     (font-spec :family "Segoe UI Symbol" :size 32)))
-
 
 
 ;;; about erc
