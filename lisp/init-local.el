@@ -56,19 +56,17 @@
 
 
 (cond ((eq system-type 'darwin)
-       (setq cn-font (font-spec :family "PingFang SC")))
+       (setq cn-font (font-spec :family "PingFang SC"))
+       ;; do not set size in above, since this will affect when scale text, so only set rescale
+       (setq face-font-rescale-alist (cons (cons cn-font 1.2) nil)))
       ((eq system-type 'gnu/linux)
        (setq cn-font (font-spec :family "WenQuanYi Zen Hei")))
       ((eq system-type 'windows-nt)
-       (setq cn-font (font-spec :family "KaiTi"))))
-
+       (setq cn-font (font-spec :family "KaiTi" :size 18))))
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font t charset cn-font))
-
-;; do not set size in above, since this will affect when scale text, so only set rescale
-(setq face-font-rescale-alist (cons (cons cn-font 1.4) nil))
 
 ;; unicode symbol 🐈😿
 (dolist (charset '(emoji))
