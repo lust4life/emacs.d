@@ -52,25 +52,27 @@
 
 ;;; 设置中英文字体,方便 org table 对齐
 ;; Setting English Font
-(set-face-attribute 'default nil :font (font-spec :name "Input" :size 14))
+(set-face-attribute 'default nil :font (font-spec :name "FiraCode Nerd Font" :size 14))
 
-(setq font (cond ((eq system-type 'darwin)     (font-spec :family "PingFang SC"))
-                 ((eq system-type 'gnu/linux)  (font-spec :family "WenQuanYi Zen Hei"))
-                 ((eq system-type 'windows-nt) (font-spec :family "Microsoft YaHei"))))
+
+(cond ((eq system-type 'darwin)
+       (setq cn-font (font-spec :family "PingFang SC")))
+      ((eq system-type 'gnu/linux)
+       (setq cn-font (font-spec :family "WenQuanYi Zen Hei")))
+      ((eq system-type 'windows-nt)
+       (setq cn-font (font-spec :family "KaiTi"))))
+
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font t charset font))
+  (set-fontset-font t charset cn-font))
 
 ;; do not set size in above, since this will affect when scale text, so only set rescale
-(setq face-font-rescale-alist (cons (cons font 1.2) nil))
+(setq face-font-rescale-alist (cons (cons cn-font 1.4) nil))
 
-
-;; unicode symbol 🐈
-(dolist (charset '(symbol))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "Segoe UI Symbol" :size 32)))
+;; unicode symbol 🐈😿
+(dolist (charset '(emoji))
+  (set-fontset-font t charset (font-spec :family "Segoe UI Emoji")))
 
 
 ;;; about erc

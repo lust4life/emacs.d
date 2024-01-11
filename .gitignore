@@ -66,3 +66,5 @@ projectile.cache
 /eln-cache/
 /projects
 /forge-*.sqlite
+
+/org-persist
