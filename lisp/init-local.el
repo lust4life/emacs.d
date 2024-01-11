@@ -58,11 +58,13 @@
 (cond ((eq system-type 'darwin)
        (setq cn-font (font-spec :family "PingFang SC"))
        ;; do not set size in above, since this will affect when scale text, so only set rescale
-       (setq face-font-rescale-alist (cons (cons cn-font 1.2) nil)))
+       (setq face-font-rescale-alist (cons (cons cn-font 1.3) nil))
+       (setq emoji-font "Apple Color Emoji"))
       ((eq system-type 'gnu/linux)
        (setq cn-font (font-spec :family "WenQuanYi Zen Hei")))
       ((eq system-type 'windows-nt)
-       (setq cn-font (font-spec :family "KaiTi" :size 18))))
+       (setq cn-font (font-spec :family "KaiTi" :size 18))
+       (setq emoji-font "Segoe UI Emoji")))
 
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
@@ -70,7 +72,7 @@
 
 ;; unicode symbol 🐈😿
 (dolist (charset '(emoji))
-  (set-fontset-font t charset (font-spec :family "Segoe UI Emoji")))
+  (set-fontset-font t charset emoji-font))
 
 
 ;;; about erc
