@@ -68,3 +68,4 @@ projectile.cache
 /forge-*.sqlite
 
 /org-persist
+/projectile.cache
