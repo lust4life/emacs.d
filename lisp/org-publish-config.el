@@ -8,8 +8,8 @@
 ;;; Code:
 (setq org-publish-project-alist '(
                                   ("org-notes"
-                                   :base-directory "~/git/blog.site.src/src/org/"
-                                   :publishing-directory "~/git/blog.site.src/src/org-html/"
+                                   :base-directory "~/git/lust4life/blog.site.src/src/org/"
+                                   :publishing-directory "~/git/lust4life/blog.site.src/src/org-html/"
                                    :recursive t
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap nil ; 这里先尝试不用生成 sitemap，貌似比较费时
