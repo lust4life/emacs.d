@@ -9,10 +9,10 @@
 ;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
 ;;(setq debug-on-error t)
 
-(let ((minver "27.1"))
+(let ((minver "28.1"))
   (when (version< emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-(when (version< emacs-version "28.1")
+(when (version< emacs-version "30.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -145,6 +145,7 @@
 (require 'init-dash)
 
 (require 'init-ledger)
+(require 'init-go)
 (require 'init-lua)
 (require 'init-uiua)
 (require 'init-zig)
@@ -153,7 +154,7 @@
 ;; Extra packages which don't require any configuration
 
 (require-package 'sudo-edit)
-(require-package 'gnuplot)
+(maybe-require-package 'gnuplot)
 (require-package 'htmlize)
 (when *is-a-mac*
   (require-package 'osx-location))
