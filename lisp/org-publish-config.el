@@ -13,7 +13,6 @@
                                    :recursive t
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap nil ; 这里先尝试不用生成 sitemap，貌似比较费时
-                                   :exclude "\\(200[7-9]-[0-9]\\)\\|\\(201[0-9]-[0-9]\\|202[0-1]-[0-9]\\)"
                                    :section-numbers nil
                                         ;:sitemap-sort-files anti-chronologically ;; 这里会导致程序无响应
                                    )
