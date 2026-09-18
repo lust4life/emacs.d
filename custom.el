@@ -52,7 +52,7 @@
                            elein elisp-slime-nav elm-mode
                            elm-test-runner embark embark-consult envrc
                            erlang exec-path-from-shell expand-region
-                           flycheck flycheck-clojure
+                           expreg flycheck flycheck-clojure
                            flycheck-color-mode-line flycheck-elm
                            flycheck-ledger flycheck-nim
                            flycheck-package flycheck-relint
@@ -62,9 +62,9 @@
                            git-link git-modes git-timemachine
                            gitconfig-mode github-clone github-review
                            gitignore-mode gnu-elpa-keyring-update
-                           gnuplot goto-gem goto-line-preview
-                           grab-mac-link guide-key haml-mode
-                           haskell-mode helm-org-rifle
+                           gnuplot go-ts-mode goto-gem
+                           goto-line-preview grab-mac-link guide-key
+                           haml-mode haskell-mode helm-org-rifle
                            highlight-escape-sequences highlight-quoted
                            hindent hippie-expand-slime htmlize
                            httprepl ibuffer-projectile ibuffer-vc
@@ -86,13 +86,14 @@
                            page-break-lines paredit paredit-everywhere
                            pdf-tools php-mode pip-requirements
                            prettier-js projectile projectile-rails
-                           psc-ide psci puni purescript-mode racer
-                           rainbow-delimiters rainbow-mode reformatter
-                           regex-tool restclient robe rspec-mode
-                           ruby-compilation ruby-hash-syntax
-                           ruff-format rust-mode sass-mode scratch seq
-                           session shfmt skewer-less skewer-mode slime
-                           slime-company sly sly-asdf sly-macrostep
+                           psc-ide psci pulsar puni purescript-mode
+                           racer rainbow-delimiters rainbow-mode
+                           reformatter regex-tool restclient robe
+                           rspec-mode ruby-compilation
+                           ruby-hash-syntax ruff-format rust-mode
+                           sass-mode scratch seq session shfmt
+                           skewer-less skewer-mode slime slime-company
+                           sly sly-asdf sly-macrostep
                            sly-repl-ansi-color smarty-mode smex
                            sqlformat sudo-edit swiper switch-window
                            symbol-overlay tagedit terraform-mode
@@ -106,7 +107,7 @@
  '(pdf-view-use-scaling t)
  '(scheme-program-name
    "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
- '(session-use-package t nil (session))
+ '(session-use-package t)
  '(user-full-name "Jun")
  '(user-mail-address "lust4life.jun@gmail.com")
  '(youdao-dictionary-app-key "0c1f54337ef6331c")
