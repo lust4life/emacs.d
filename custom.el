@@ -10,7 +10,7 @@
    '("/Users/j/org/d:/Users/jiajun.qian/git/lust4life/blog.site.src/src/org/journal/20230201"
      "/Users/j/org/d:/git/lust4life/blog.site.src/src/org/journal/20240101"
      "/Users/j/org/c:/Users/lust4/git/lust4life/blog.site.src/src/org/journal/20240101"
-     "/Users/j/git/lust4life/blog.site.src/src/org/journal/20260901"))
+     "/Users/j/git/lust4life/blog.site.src/src/org/journal/20261101"))
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-default-language "zh")
  '(org-export-with-section-numbers nil)
